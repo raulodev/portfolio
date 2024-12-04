@@ -10,10 +10,10 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = ({ project, onSelect }) => {
   return (
-    <div className=" p-4 rounded hover:shadow-xl space-y-4 duration-200">
+    <div className="p-4 rounded shadow hover:shadow-xl space-y-4 duration-200">
       <div>
-        <p className="text-lg font-bold">{project.name}</p>
-        <p className="line-clamp-4">{project.description}</p>
+        <p className="text-xl font-bold">{project.name}</p>
+        <p className="line-clamp-3">{project.description}</p>
       </div>
 
       <div className="flex items-center justify-between">

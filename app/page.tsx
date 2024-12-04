@@ -14,16 +14,15 @@ export default function Home() {
   const projSection = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="p-4 space-y-4 text-gray-800 text-lg font-mono">
+    <div className="px-4 space-y-4 text-gray-800 font-serif">
       {/* Personal Info */}
-      <div className="flex flex-col gap-4 items-center justify-center h-screen text-right sm:text-center">
+      <div className="flex flex-col gap-4 items-center justify-center h-screen text-center">
         <h1 className="text-4xl font-black">{personalInfo.name}</h1>
-        <p className="sm:w-1/2">{personalInfo.summary}</p>
-
+        <p className="sm:w-1/2 text-lg">{personalInfo.summary}</p>
         <div>
           {showArrow && (
             <button
-              className="duration-75"
+              className="absolute bottom-10 duration-75"
               onClick={() => {
                 projSection.current?.scrollIntoView({
                   behavior: "smooth",

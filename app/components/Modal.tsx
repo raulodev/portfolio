@@ -24,7 +24,7 @@ export const Modal: React.FC<ModalProps> = ({ onClose, project }) => {
           </span>
         </div>
 
-        <div className="h-max max-h-96 sm:max-h-56 overflow-y-auto pr-1">
+        <div className="h-max text-lg max-h-96 sm:max-h-56 overflow-y-auto pr-1">
           {project.description}
           <p className="font-bold mt-4">Techs:</p>
           <ol className="list-disc list-inside">
