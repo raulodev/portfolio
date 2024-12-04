@@ -2,7 +2,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
-import { ArrowBigDownDashIcon, Mail } from "lucide-react";
+import { Mail, ArrowDown } from "lucide-react";
 import { projects, personalInfo } from "@/lib/config";
 import { Card } from "@/components/Card";
 import { Modal } from "@/components/Modal";
@@ -14,30 +14,23 @@ export default function Home() {
   const projSection = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="p-4 space-y-4 text-gray-800 text-lg">
+    <div className="p-4 space-y-4 text-gray-800 text-lg font-mono">
       {/* Personal Info */}
-      <div className="flex flex-col gap-4 items-center justify-center h-screen">
+      <div className="flex flex-col gap-4 items-center justify-center h-screen text-right sm:text-center">
         <h1 className="text-4xl font-black">{personalInfo.name}</h1>
-        <p className="sm:w-1/2 text-center">{personalInfo.summary}</p>
+        <p className="sm:w-1/2">{personalInfo.summary}</p>
+
         <div>
-          <Link href={`mailto:${personalInfo.email}`}>
-            <button className="bg-red-500 text-white rounded px-2 py-1 shadow">
-              <Mail className="inline-flex mr-2" />
-              Gmail
-            </button>
-          </Link>
-        </div>
-        <div className="mt-40">
           {showArrow && (
             <button
-              className="animate-bounce duration-200"
+              className="duration-75"
               onClick={() => {
                 projSection.current?.scrollIntoView({
                   behavior: "smooth",
                 });
               }}
             >
-              <ArrowBigDownDashIcon />
+              <ArrowDown />
             </button>
           )}
         </div>
@@ -45,7 +38,7 @@ export default function Home() {
 
       {/* Projects */}
       <motion.p
-        className="text-center font-semibold text-2xl"
+        className="text-center font-bold text-2xl"
         ref={projSection}
         onViewportEnter={() => {
           setShowArrow(false);
@@ -66,6 +59,13 @@ export default function Home() {
             <Modal project={project} onClose={() => setProject(undefined)} />
           )}
         </AnimatePresence>
+      </div>
+      <div className="fixed right-4 bottom-4">
+        <Link href={`mailto:${personalInfo.email}`}>
+          <button className="bg-red-500 hover:bg-green-500 transition-colors ease-in-out text-white rounded px-2 py-1 shadow-lg">
+            <Mail />
+          </button>
+        </Link>
       </div>
       <footer className="h-10"></footer>
     </div>

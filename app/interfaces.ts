@@ -13,5 +13,4 @@ export interface Projects {
 
 export interface Tech {
   name: string;
-  color: "red" | "blue" | "green";
 }

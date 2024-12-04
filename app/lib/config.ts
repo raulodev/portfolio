@@ -13,7 +13,7 @@ export const personalInfo: PersonalInfo = {
 export const projects: Projects[] = [
   {
     name: "Consumo Claro",
-    description: `"Consumo Claro" is an Android application designed to help 
+    description: `Android application designed to help 
     households in Cuba control and monitor their electricity consumption. 
     The application allows users to record and track energy usage. With an 
     intuitive interface and key functionalities, 
@@ -21,26 +21,19 @@ export const projects: Projects[] = [
     link: "https://github.com/raulodev/consumo-claro",
     tech: [
       {
-        name: "react",
-        color: "blue",
-      },
-      {
         name: "react native",
-        color: "green",
       },
       {
         name: "expo",
-        color: "red",
       },
       {
         name: "typescript",
-        color: "blue",
       },
     ],
   },
   {
-    name: "nauta",
-    description: `"nauta" is a command line tool developed to facilitate access 
+    name: "nauta CLI",
+    description: `Command line tool developed to facilitate access 
     and management of the Nauta internet service in Cuba. This application allows 
     users to interact with their Nauta account directly from the terminal, offering 
     functionalities to access and manage the connection efficiently. With "nauta", 
@@ -50,21 +43,18 @@ export const projects: Projects[] = [
     tech: [
       {
         name: "python",
-        color: "blue",
       },
       {
         name: "pipx",
-        color: "green",
       },
       {
         name: "scraping",
-        color: "red",
       },
     ],
   },
   {
     name: "PageCraft",
-    description: `"PageCraft" is a powerful and easy-to-use package that simplifies
+    description: `Powerful and easy-to-use package that simplifies
      creating pagination in your applications. This tool allows developers to handle
       large data sets efficiently by providing a clear and consistent interface for
        navigating paginated data.`,
@@ -72,21 +62,18 @@ export const projects: Projects[] = [
     tech: [
       {
         name: "python",
-        color: "blue",
       },
       {
         name: "pip",
-        color: "green",
       },
       {
         name: "sqlalchemy",
-        color: "red",
       },
     ],
   },
   {
     name: "Task Queue Checker",
-    description: `"Task Queue Checker" is a tool designed to simplify 
+    description: `Tool designed to simplify 
     task queue management and monitoring in Python environments. 
     This application makes it easy for developers to monitor task queues, 
     ensuring that they are processed efficiently and resolving any 
@@ -96,23 +83,18 @@ export const projects: Projects[] = [
     tech: [
       {
         name: "python",
-        color: "blue",
       },
       {
         name: "pip",
-        color: "green",
       },
       {
         name: "sqlite",
-        color: "red",
       },
       {
         name: "mysql",
-        color: "blue",
       },
       {
         name: "postgresql",
-        color: "green",
       },
     ],
   },
