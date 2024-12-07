@@ -27,7 +27,7 @@ export const Modal: React.FC<ModalProps> = ({ onClose, project }) => {
         <div className="h-max text-lg max-h-screen overflow-y-auto pr-1">
           {project.description}
           <p className="font-bold mt-4">Techs:</p>
-          <p>{project.tech.map((el, index) => `${el.name}, `)}</p>
+          <p>{project.tech.map((el) => `${el.name}, `)}</p>
         </div>
       </div>
     </motion.div>
