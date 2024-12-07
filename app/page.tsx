@@ -19,6 +19,11 @@ export default function Home() {
       <div className="flex flex-col gap-4 items-center justify-center h-screen text-center">
         <h1 className="text-4xl font-black">{personalInfo.name}</h1>
         <p className="sm:w-1/2 text-lg">{personalInfo.summary}</p>
+        <Link href={`mailto:${personalInfo.email}`}>
+          <button className="bg-gray-800 flex justify-center items-center text-white rounded px-4 py-2">
+            <Mail className="mr-1 h-5 w-5" /> Contact
+          </button>
+        </Link>
         <div>
           {showArrow && (
             <button
@@ -48,7 +53,7 @@ export default function Home() {
       >
         Projects
       </motion.p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2">
         {projects.map((el, index) => (
           <Card key={index} project={el} onSelect={() => setProject(el)} />
         ))}
@@ -59,13 +64,13 @@ export default function Home() {
           )}
         </AnimatePresence>
       </div>
-      <div className="fixed right-4 bottom-4">
+      {/* <div className="fixed right-4 bottom-4">
         <Link href={`mailto:${personalInfo.email}`}>
           <button className="bg-red-500 hover:bg-green-500 transition-colors ease-in-out text-white rounded px-2 py-1 shadow-lg">
             <Mail />
           </button>
         </Link>
-      </div>
+      </div> */}
       <footer className="h-10"></footer>
     </div>
   );

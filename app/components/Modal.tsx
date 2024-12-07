@@ -16,13 +16,7 @@ export const Modal: React.FC<ModalProps> = ({ onClose, project }) => {
       exit={{ opacity: 0 }}
       className="fixed backdrop-blur top-0 right-0 bottom-0 left-0 bg-black bg-opacity-10 flex justify-center items-center"
     >
-      <motion.div
-        initial={{ y: 800 }}
-        animate={{ y: 0 }}
-        exit={{ y: 800 }}
-        transition={{ type: "keyframes" }}
-        className="bg-white w-full self-end sm:self-center sm:w-3/4 lg:w-1/2  p-4 rounded-t sm:rounded  shadow-md space-y-2"
-      >
+      <div className="bg-white w-full self-end sm:self-center sm:w-3/4 lg:w-1/2  p-4 rounded-t sm:rounded  shadow-md space-y-2">
         <div className="flex items-center justify-between">
           <p className="text-xl font-bold">{project.name}</p>
           <span className="rotate-45 cursor-pointer" onClick={onClose}>
@@ -30,16 +24,12 @@ export const Modal: React.FC<ModalProps> = ({ onClose, project }) => {
           </span>
         </div>
 
-        <div className="h-max text-lg max-h-96 sm:max-h-56 overflow-y-auto pr-1">
+        <div className="h-max text-lg max-h-screen overflow-y-auto pr-1">
           {project.description}
           <p className="font-bold mt-4">Techs:</p>
-          <ol className="list-disc list-inside">
-            {project.tech.map((el, index) => (
-              <li key={index}>{el.name}</li>
-            ))}
-          </ol>
+          <p>{project.tech.map((el, index) => `${el.name}, `)}</p>
         </div>
-      </motion.div>
+      </div>
     </motion.div>
   );
 };

@@ -98,4 +98,50 @@ export const projects: Projects[] = [
       },
     ],
   },
+  {
+    name: "Kill Bill client",
+    description: `Kill Bill is a library that allows developers to 
+    easily interact with the Kill Bill API from Python applications. 
+    Kill Bill is an open and flexible billing platform that offers 
+    recurring billing and subscription management solutions. This 
+    library provides intuitive and simplified methods for accessing 
+    Kill Bill features, including creating and managing accounts, 
+    subscriptions, invoices, payments, and more.`,
+    link: "https://github.com/raulodev/python-killbill-client",
+    tech: [
+      {
+        name: "python",
+      },
+      {
+        name: "pip",
+      },
+      {
+        name: "kill bill",
+      },
+    ],
+  },
+  {
+    name: "Kill Bill XML Builder",
+    description: `Kill Bill XML Builder is a library that facilitates 
+    the creation and manipulation of XML files specific to the Kill 
+    Bill billing platform. This library provides a structured 
+    and efficient way to generate XML documents necessary to 
+    interact with Kill Bill APIs, allowing developers to better 
+    manage their integrations and customizations.`,
+    link: "https://github.com/raulodev/killbill-xml-builder",
+    tech: [
+      {
+        name: "python",
+      },
+      {
+        name: "pip",
+      },
+      {
+        name: "xml",
+      },
+      {
+        name: "kill bill",
+      },
+    ],
+  },
 ];
