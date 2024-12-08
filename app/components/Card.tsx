@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { GithubIcon, BookMarked } from "lucide-react";
+import { GithubIcon } from "lucide-react";
 import { Projects } from "@/interfaces";
 
 interface CardProps {
@@ -10,7 +10,10 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = ({ project, onSelect }) => {
   return (
-    <div className="p-4 rounded hover:shadow-xl space-y-4 duration-200 border">
+    <div
+      className="p-4 rounded hover:shadow-xl space-y-4 duration-200 border cursor-pointer"
+      onClick={onSelect}
+    >
       <div>
         <p className="text-xl font-bold">{project.name}</p>
         <p className="line-clamp-3">{project.description}</p>
@@ -22,14 +25,6 @@ export const Card: React.FC<CardProps> = ({ project, onSelect }) => {
             <GithubIcon />
           </div>
         </Link>
-
-        <div>
-          <button onClick={onSelect} title="Expand project info">
-            <div className="rounded-full p-1">
-              <BookMarked />
-            </div>
-          </button>
-        </div>
       </div>
     </div>
   );
