@@ -2,7 +2,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Mail } from "lucide-react";
 import { projects, personalInfo } from "@/lib/config";
 import { Card } from "@/components/Card";
 import { Modal } from "@/components/Modal";
@@ -20,8 +20,11 @@ export default function Home() {
         <h1 className="text-4xl font-black">{personalInfo.name}</h1>
         <p className="sm:w-3/4 text-lg">{personalInfo.summary}</p>
         <Link href={`mailto:${personalInfo.email}`}>
-          <button className="bg-gray-800 flex justify-center items-center text-white rounded-full px-4 py-2">
+          <button className="bg-gray-800 flex justify-between items-center text-white rounded-full pl-4 pr-2 py-2  w-32">
             Contact
+            <span className="ml-1 bg-white rounded-full p-1 text-gray-800">
+              <Mail />
+            </span>
           </button>
         </Link>
         <div className="absolute bottom-10">
