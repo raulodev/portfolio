@@ -2,7 +2,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
-import { Mail, ArrowDown } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { projects, personalInfo } from "@/lib/config";
 import { Card } from "@/components/Card";
 import { Modal } from "@/components/Modal";
@@ -14,20 +14,20 @@ export default function Home() {
   const projSection = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="px-4 space-y-4 text-gray-800 font-serif">
+    <div className="px-4 space-y-4 text-gray-800 font-serif bg-white">
       {/* Personal Info */}
       <div className="flex flex-col gap-4 items-center justify-center h-screen text-center">
         <h1 className="text-4xl font-black">{personalInfo.name}</h1>
-        <p className="sm:w-1/2 text-lg">{personalInfo.summary}</p>
+        <p className="sm:w-3/4 text-lg">{personalInfo.summary}</p>
         <Link href={`mailto:${personalInfo.email}`}>
-          <button className="bg-gray-800 flex justify-center items-center text-white rounded px-4 py-2">
-            <Mail className="mr-1 h-5 w-5" /> Contact
+          <button className="bg-gray-800 flex justify-center items-center text-white rounded-full px-4 py-2">
+            Contact
           </button>
         </Link>
-        <div>
+        <div className="absolute bottom-10">
           {showArrow && (
             <button
-              className="absolute bottom-10 duration-75"
+              className="duration-75"
               onClick={() => {
                 projSection.current?.scrollIntoView({
                   behavior: "smooth",
