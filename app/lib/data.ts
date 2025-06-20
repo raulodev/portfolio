@@ -66,6 +66,9 @@ export const projects: Projects[] = [
       {
         name: "tailwindcss",
       },
+      {
+        name: "javascript",
+      },
     ],
   },
 
