@@ -7,10 +7,16 @@ export interface PersonalInfo {
 export interface Projects {
   name: string;
   description: string;
-  link: string;
+  link: Link[];
   tech: Tech[];
 }
 
 export interface Tech {
   name: string;
+}
+
+export interface Link {
+  description: string;
+  link: string;
+  icon: "GithubIcon" | "LucideLink";
 }
