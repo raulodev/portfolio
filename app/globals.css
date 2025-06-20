@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+select {
+  &,
+  &::picker(select) {
+    appearance: base-select;
+  }
+}
+
+select::picker(select) {
+  margin-top: calc(var(--spacing) * 0.5);
+  border: none;
+  border-width: 1px;
+  border-color: var(--color-gray-200);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-2xl);
+  border-radius: var(--radius-sm);
+}
+
+select::picker-icon {
+  display: none;
+}
+
+option::checkmark {
+  content: "✔️";
+  padding: var(--spacing);
+}

@@ -1,17 +1,23 @@
 "use client";
-import { useState, useRef } from "react";
-import Link from "next/link";
-import { motion, AnimatePresence } from "motion/react";
-import { ArrowDown, Mail } from "lucide-react";
-import { projects, personalInfo } from "@/lib/config";
 import { Card } from "@/components/Card";
 import { Modal } from "@/components/Modal";
 import { Projects } from "@/interfaces";
+import { personalInfo, projects } from "@/lib/data";
+import { ArrowDown, Mail } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
+import Link from "next/link";
+import { useRef, useState } from "react";
 
 export default function Home() {
   const [project, setProject] = useState<Projects>();
   const [showArrow, setShowArrow] = useState<boolean>(true);
+  const [tech, setTech] = useState<string>("All techs");
   const projSection = useRef<HTMLDivElement>(null);
+
+  const allTechs = [
+    "All techs",
+    ...new Set(projects.flatMap((el) => el.tech).map((el) => el.name)),
+  ];
 
   return (
     <div className="px-4 space-y-4 text-gray-800 font-serif bg-white">
@@ -56,10 +62,47 @@ export default function Home() {
       >
         Projects
       </motion.p>
+
+      {/* select */}
+      <div className="flex justify-center my-10">
+        <select
+          name="techs"
+          id="tech-select"
+          className="py-2 px-4 bg-gray-200 rounded outline-none"
+          onChange={(e) => setTech(e.target.value)}
+        >
+          {allTechs.map((el, index) => (
+            <option
+              key={index}
+              value={el}
+              className="hover:bg-gray-200 p-1 text-center checked:bg-gray-200"
+            >
+              {el}
+            </option>
+          ))}
+        </select>
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2">
-        {projects.map((el, index) => (
-          <Card key={index} project={el} onSelect={() => setProject(el)} />
-        ))}
+        {tech !== "All techs"
+          ? projects
+              .filter((project) =>
+                project.tech.some((techEl) => techEl.name === tech)
+              )
+              .map((project, index) => (
+                <Card
+                  key={index}
+                  project={project}
+                  onSelect={() => setProject(project)}
+                />
+              ))
+          : projects.map((project, index) => (
+              <Card
+                key={index}
+                project={project}
+                onSelect={() => setProject(project)}
+              />
+            ))}
 
         <AnimatePresence>
           {project && (
@@ -67,13 +110,6 @@ export default function Home() {
           )}
         </AnimatePresence>
       </div>
-      {/* <div className="fixed right-4 bottom-4">
-        <Link href={`mailto:${personalInfo.email}`}>
-          <button className="bg-red-500 hover:bg-green-500 transition-colors ease-in-out text-white rounded px-2 py-1 shadow-lg">
-            <Mail />
-          </button>
-        </Link>
-      </div> */}
       <footer className="h-10"></footer>
     </div>
   );
