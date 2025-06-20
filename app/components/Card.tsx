@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { GithubIcon } from "lucide-react";
+import { GithubIcon, LucideLink } from "lucide-react";
 import { Projects } from "@/interfaces";
 
 interface CardProps {
@@ -11,7 +11,7 @@ interface CardProps {
 export const Card: React.FC<CardProps> = ({ project, onSelect }) => {
   return (
     <div
-      className="p-4 rounded hover:shadow-xl space-y-4 duration-200 border cursor-pointer"
+      className="p-4 rounded hover:shadow-xl space-y-4 duration-200 border border-gray-200 cursor-pointer"
       onClick={onSelect}
     >
       <div>
@@ -19,12 +19,19 @@ export const Card: React.FC<CardProps> = ({ project, onSelect }) => {
         <p className="line-clamp-3">{project.description}</p>
       </div>
 
-      <div className="flex items-center justify-between">
-        <Link href={project.link} target="_blank" title="Go to github project">
-          <div className="bg-black rounded-full p-1 text-white">
-            <GithubIcon />
-          </div>
-        </Link>
+      <div className="flex items-center justify-start gap-2">
+        {project.link.map((el, index) => (
+          <Link
+            key={index}
+            href={el.link}
+            target="_blank"
+            title={`Go to ${el.description} project`}
+          >
+            <div className="bg-black rounded-full p-1 text-white">
+              {el.icon == "GithubIcon" ? <GithubIcon /> : <LucideLink />}
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );
