@@ -12,13 +12,82 @@ export const personalInfo: PersonalInfo = {
 
 export const projects: Projects[] = [
   {
+    name: "Gym Logs",
+    description: `Gym Logs is a mobile app developed in Kotlin 
+    and Jetpack Compose, which allows gym owners to record 
+    attendance and monitor monthly payments easily and efficiently.`,
+    link: [
+      {
+        description: "Github",
+        link: "https://github.com/raulodev/gym-logs",
+        icon: "GithubIcon",
+      },
+    ],
+    tech: [
+      {
+        name: "kotlin",
+      },
+      {
+        name: "jetpack compose",
+      },
+    ],
+  },
+
+  {
+    name: "Hol4 Mund0",
+    description: `Blogging platform for creating, publishing, 
+    and sharing content with ease, security, and responsive design, 
+    ideal for writers and professionals looking to connect and 
+    share knowledge online.`,
+    link: [
+      {
+        description: "site",
+        link: "https://hol4mund0.vercel.app",
+        icon: "LucideLink",
+      },
+      {
+        description: "frontend repo",
+        link: "https://github.com/raulodev/hol4mund0-frontend",
+        icon: "GithubIcon",
+      },
+      {
+        description: "backend repo",
+        link: "https://github.com/raulodev/hol4mund0-backend",
+        icon: "GithubIcon",
+      },
+    ],
+    tech: [
+      {
+        name: "nextjs",
+      },
+      {
+        name: "django",
+      },
+      {
+        name: "tailwindcss",
+      },
+    ],
+  },
+
+  {
     name: "Consumo Claro",
     description: `Android application designed to help 
     households in Cuba control and monitor their electricity consumption. 
     The application allows users to record and track energy usage. With an 
     intuitive interface and key functionalities, 
     "Consumo Claro" helps users reduce costs and promote sustainable practices.`,
-    link: "https://github.com/raulodev/consumo-claro",
+    link: [
+      {
+        description: "site",
+        link: "https://apklis.cu/application/com.raulodev.consumoclaro",
+        icon: "LucideLink",
+      },
+      {
+        description: "Github",
+        link: "https://github.com/raulodev/consumo-claro",
+        icon: "GithubIcon",
+      },
+    ],
     tech: [
       {
         name: "react native",
@@ -39,7 +108,18 @@ export const projects: Projects[] = [
     functionalities to access and manage the connection efficiently. With "nauta", 
     users simplify the administration of their accounts without the need for a 
     graphical interface.`,
-    link: "https://github.com/raulodev/nauta",
+    link: [
+      {
+        description: "site",
+        link: "https://pypi.org/project/nauta/",
+        icon: "LucideLink",
+      },
+      {
+        description: "Github",
+        link: "https://github.com/raulodev/nauta",
+        icon: "GithubIcon",
+      },
+    ],
     tech: [
       {
         name: "python",
@@ -58,7 +138,18 @@ export const projects: Projects[] = [
      creating pagination in your applications. This tool allows developers to handle
       large data sets efficiently by providing a clear and consistent interface for
        navigating paginated data.`,
-    link: "https://github.com/raulodev/pagecraft",
+    link: [
+      {
+        description: "site",
+        link: "https://pypi.org/project/pagecraft/",
+        icon: "LucideLink",
+      },
+      {
+        description: "Github",
+        link: "https://github.com/raulodev/pagecraft",
+        icon: "GithubIcon",
+      },
+    ],
     tech: [
       {
         name: "python",
@@ -79,7 +170,18 @@ export const projects: Projects[] = [
     ensuring that they are processed efficiently and resolving any 
     potential issues in a timely manner. With "Task Queue Checker", 
     task management in Python projects becomes easier and more effective.`,
-    link: "https://github.com/raulodev/task-queue-checker",
+    link: [
+      {
+        description: "site",
+        link: "https://pypi.org/project/task-queue-checker/",
+        icon: "LucideLink",
+      },
+      {
+        description: "Github",
+        link: "https://github.com/raulodev/task-queue-checker",
+        icon: "GithubIcon",
+      },
+    ],
     tech: [
       {
         name: "python",
@@ -107,7 +209,18 @@ export const projects: Projects[] = [
     library provides intuitive and simplified methods for accessing 
     Kill Bill features, including creating and managing accounts, 
     subscriptions, invoices, payments, and more.`,
-    link: "https://github.com/raulodev/python-killbill-client",
+    link: [
+      {
+        description: "site",
+        link: "https://pypi.org/project/python-killbill-client/",
+        icon: "LucideLink",
+      },
+      {
+        description: "Github",
+        link: "https://github.com/raulodev/python-killbill-client",
+        icon: "GithubIcon",
+      },
+    ],
     tech: [
       {
         name: "python",
@@ -128,7 +241,18 @@ export const projects: Projects[] = [
     and efficient way to generate XML documents necessary to 
     interact with Kill Bill APIs, allowing developers to better 
     manage their integrations and customizations.`,
-    link: "https://github.com/raulodev/killbill-xml-builder",
+    link: [
+      {
+        description: "site",
+        link: "https://pypi.org/project/killbill-xml-builder",
+        icon: "LucideLink",
+      },
+      {
+        description: "Github",
+        link: "https://github.com/raulodev/killbill-xml-builder",
+        icon: "GithubIcon",
+      },
+    ],
     tech: [
       {
         name: "python",
