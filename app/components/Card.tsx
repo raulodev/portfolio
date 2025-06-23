@@ -11,7 +11,7 @@ interface CardProps {
 export const Card: React.FC<CardProps> = ({ project, onSelect }) => {
   return (
     <div
-      className="p-4 rounded hover:shadow-xl space-y-4 duration-200 border border-gray-200 cursor-pointer"
+      className="p-4 rounded hover:shadow-2xl space-y-4 duration-200 border border-gray-200 cursor-pointer"
       onClick={onSelect}
     >
       <div>
@@ -27,7 +27,7 @@ export const Card: React.FC<CardProps> = ({ project, onSelect }) => {
             target="_blank"
             title={`Go to ${el.description} project`}
           >
-            <div className="bg-black rounded-full p-1 text-white">
+            <div className="rounded-full p-2 text-black hover:bg-gray-200">
               {el.icon == "GithubIcon" ? <GithubIcon /> : <LucideLink />}
             </div>
           </Link>
