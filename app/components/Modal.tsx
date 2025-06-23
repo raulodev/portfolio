@@ -23,7 +23,7 @@ export const Modal: React.FC<ModalProps> = ({ onClose, project }) => {
     >
       <div className="bg-white border border-gray-200 w-full self-end sm:self-center sm:w-3/4 lg:w-1/2  p-4 rounded-t sm:rounded  shadow-md space-y-2">
         <div className="flex items-center justify-between">
-          <p className="text-xl font-bold">{project.name}</p>
+          <p className="text-2xl font-bold">{project.name}</p>
           <span className="rotate-45 cursor-pointer" onClick={onClose}>
             <PlusIcon />
           </span>
