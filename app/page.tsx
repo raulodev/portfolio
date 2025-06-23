@@ -26,9 +26,9 @@ export default function Home() {
         <h1 className="text-4xl font-black">{personalInfo.name}</h1>
         <p className="sm:w-3/4 text-lg">{personalInfo.summary}</p>
         <Link href={`mailto:${personalInfo.email}`}>
-          <button className="bg-gray-800 flex justify-between items-center text-white rounded-full pl-4 pr-2 py-2  w-32">
+          <button className="bg-gray-800 flex justify-between items-center text-white rounded-full pl-4 pr-2 py-2 w-36">
             Contact
-            <span className="ml-1 bg-white rounded-full p-1 text-gray-800">
+            <span className="ml-1 bg-white rounded-full p-2 text-gray-800">
               <Mail />
             </span>
           </button>
