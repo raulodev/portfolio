@@ -12,6 +12,39 @@ export const personalInfo: PersonalInfo = {
 
 export const projects: Projects[] = [
   {
+    name: "Valkyria 02",
+    description: `A system built with Django that allows scheduling
+     and managing the sending of advertisements to channels and 
+     groups on Telegram. It leverages Redis for handling scheduled 
+     tasks and PostgreSQL as the database, while Docker ensures 
+     seamless deployment and configuration across different 
+     environments. The project combines business logic, 
+     integration with Telegram APIs, and modern tools to deliver an 
+     efficient and reliable solution for automated social 
+     media advertising campaigns.`,
+    link: [
+      {
+        description: "site",
+        link: "https://t.me/Valkyria02_Pro_bot",
+        icon: "LucideLink",
+      },
+    ],
+    tech: [
+      {
+        name: "django",
+      },
+      {
+        name: "redis",
+      },
+      {
+        name: "postgres",
+      },
+      {
+        name: "docker",
+      },
+    ],
+  },
+  {
     name: "Gym Logs",
     description: `Gym Logs is a mobile app developed in Kotlin 
     and Jetpack Compose, which allows gym owners to record 
@@ -200,6 +233,9 @@ export const projects: Projects[] = [
       },
       {
         name: "postgresql",
+      },
+      {
+        name: "redis",
       },
     ],
   },
