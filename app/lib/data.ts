@@ -307,4 +307,102 @@ export const projects: Projects[] = [
       },
     ],
   },
+  {
+    name: "translatebot-tg",
+    description: `This is a Telegram bot launched more than 2 years ago 
+    to translate messages into different languages in groups 
+    and in private chat with the bot, built with Python and 
+    which is currently shut down, it reached more than 3,000 users.`,
+    tech: [
+      {
+        name: "python",
+      },
+      {
+        name: "docker",
+      },
+      {
+        name: "sqlite",
+      },
+    ],
+    link: [
+      {
+        description: "Github",
+        link: "https://github.com/raulodev/translatebot-tg",
+        icon: "GithubIcon",
+      },
+    ],
+  },
+  {
+    name: "Hunti",
+    description:
+      "Hunti is a Twitter bot created to capture posts, it is currently shut down.",
+    tech: [
+      {
+        name: "python",
+      },
+
+      {
+        name: "docker",
+      },
+    ],
+    link: [
+      {
+        description: "Github",
+        link: "https://github.com/raulodev/hunti",
+        icon: "GithubIcon",
+      },
+    ],
+  },
+  {
+    name: "Calcuserver",
+    description: "Calculator to obtain the price of VPS rented by ETECSA",
+    tech: [
+      {
+        name: "html",
+      },
+
+      {
+        name: "javascript",
+      },
+    ],
+    link: [
+      {
+        description: "site",
+        link: "https://raulodev.github.io/calcuserver/",
+        icon: "LucideLink",
+      },
+      {
+        description: "Github",
+        link: "https://github.com/raulodev/calcuserver",
+        icon: "GithubIcon",
+      },
+    ],
+  },
+  {
+    name: "PDFSigner",
+    description: "Application to manipulate the settings of a PDF signer",
+    tech: [
+      {
+        name: "java",
+      },
+      {
+        name: "javafx",
+      },
+      {
+        name: "css",
+      },
+    ],
+    link: [
+      {
+        description: "site",
+        link: "https://raulodev.github.io/calcuserver/",
+        icon: "LucideLink",
+      },
+      {
+        description: "Github",
+        link: "https://github.com/raulodev/calcuserver",
+        icon: "GithubIcon",
+      },
+    ],
+  },
 ];
