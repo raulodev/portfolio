@@ -16,7 +16,7 @@ export const Card: React.FC<CardProps> = ({ project, onSelect }) => {
     >
       <div>
         <p className="text-xl font-bold">{project.name}</p>
-        <p className="line-clamp-3">{project.description}</p>
+        <p className="line-clamp-2">{project.description}</p>
       </div>
 
       <div className="flex items-center justify-start gap-2">
