@@ -11,7 +11,7 @@ interface CardProps {
 export const Card: React.FC<CardProps> = ({ project, onSelect }) => {
   return (
     <div
-      className="p-4 rounded hover:shadow-2xl space-y-4 duration-200 border border-gray-200 cursor-pointer"
+      className="p-4 rounded hover:shadow space-y-4 duration-200 border border-gray-200 cursor-pointer hover:shadow-gray-800"
       onClick={onSelect}
     >
       <div>
