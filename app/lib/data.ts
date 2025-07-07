@@ -43,6 +43,20 @@ export const projects: Projects[] = [
         name: "docker",
       },
     ],
+    image: [
+      {
+        src: "/valkyria02-1.png",
+        alt: "hol4 mund0",
+        bgContainerClass: "bg-gradient-to-r from-emerald-500 to-lime-600",
+        isMain: true,
+      },
+      {
+        src: "/valkyria02-2.png",
+        alt: "hol4 mund0",
+        bgContainerClass: "bg-gradient-to-r from-emerald-500 to-lime-600",
+        isMain: false,
+      },
+    ],
   },
   {
     name: "Gym Logs",
@@ -62,6 +76,14 @@ export const projects: Projects[] = [
       },
       {
         name: "jetpack compose",
+      },
+    ],
+    image: [
+      {
+        src: "/gym-logs.png",
+        alt: "gym logs",
+        bgContainerClass: "bg-gradient-to-r from-blue-500 to-blue-600",
+        isMain: true,
       },
     ],
   },
@@ -103,6 +125,14 @@ export const projects: Projects[] = [
         name: "javascript",
       },
     ],
+    image: [
+      {
+        src: "/hol4-mund0.png",
+        alt: "hol4 mund0",
+        bgContainerClass: "bg-gradient-to-r from-emerald-500 to-lime-600",
+        isMain: true,
+      },
+    ],
   },
 
   {
@@ -133,6 +163,29 @@ export const projects: Projects[] = [
       },
       {
         name: "typescript",
+      },
+    ],
+    image: [
+      {
+        src: "/consumo-claro-1.png",
+        alt: "consumo claro",
+        bgContainerClass:
+          "bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r",
+        isMain: true,
+      },
+      {
+        src: "/consumo-claro-2.png",
+        alt: "consumo claro",
+        bgContainerClass:
+          "bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r",
+        isMain: false,
+      },
+      {
+        src: "/consumo-claro-3.png",
+        alt: "consumo claro",
+        bgContainerClass:
+          "bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r",
+        isMain: false,
       },
     ],
   },
@@ -167,6 +220,14 @@ export const projects: Projects[] = [
         name: "scraping",
       },
     ],
+    image: [
+      {
+        src: "/nauta-cli.png",
+        alt: "nauta cli",
+        bgContainerClass: "bg-gradient-to-r from-indigo-300 to-purple-400",
+        isMain: true,
+      },
+    ],
   },
   {
     name: "PageCraft",
@@ -195,6 +256,14 @@ export const projects: Projects[] = [
       },
       {
         name: "sqlalchemy",
+      },
+    ],
+    image: [
+      {
+        src: "/pagecraft.png",
+        alt: "pagecraft",
+        bgContainerClass: "bg-gradient-to-r from-orange-400 to-rose-400",
+        isMain: true,
       },
     ],
   },
@@ -238,6 +307,14 @@ export const projects: Projects[] = [
         name: "redis",
       },
     ],
+    image: [
+      {
+        src: "/task-queue-checker.png",
+        alt: "task queue checker",
+        bgContainerClass: "bg-gradient-to-r from-orange-400 to-rose-400",
+        isMain: true,
+      },
+    ],
   },
   {
     name: "Kill Bill client",
@@ -269,6 +346,14 @@ export const projects: Projects[] = [
       },
       {
         name: "kill bill",
+      },
+    ],
+    image: [
+      {
+        src: "/python-killbill-client.png",
+        alt: "python killbill client",
+        bgContainerClass: "bg-gradient-to-r from-orange-400 to-rose-400",
+        isMain: true,
       },
     ],
   },
@@ -306,6 +391,14 @@ export const projects: Projects[] = [
         name: "kill bill",
       },
     ],
+    image: [
+      {
+        src: "/killbill-xml-builder.png",
+        alt: "killbill xml builder",
+        bgContainerClass: "bg-gradient-to-r from-orange-400 to-rose-400",
+        isMain: true,
+      },
+    ],
   },
   {
     name: "translatebot-tg",
@@ -331,6 +424,14 @@ export const projects: Projects[] = [
         icon: "GithubIcon",
       },
     ],
+    image: [
+      {
+        src: "/translatebot-tg.png",
+        alt: "translatebot-tg",
+        bgContainerClass: "bg-gradient-to-r from-orange-400 to-rose-400",
+        isMain: true,
+      },
+    ],
   },
   {
     name: "Hunti",
@@ -350,6 +451,20 @@ export const projects: Projects[] = [
         description: "Github",
         link: "https://github.com/raulodev/hunti",
         icon: "GithubIcon",
+      },
+    ],
+    image: [
+      {
+        src: "/hunti-1.png",
+        alt: "screenshot hunti",
+        bgContainerClass: "bg-gradient-to-r from-blue-500 to-blue-600",
+        isMain: false,
+      },
+      {
+        src: "/hunti-2.png",
+        alt: "screenshot hunti",
+        bgContainerClass: "bg-gradient-to-r from-blue-500 to-blue-600",
+        isMain: true,
       },
     ],
   },
@@ -377,6 +492,14 @@ export const projects: Projects[] = [
         icon: "GithubIcon",
       },
     ],
+    image: [
+      {
+        src: "/calcuserver.png",
+        alt: "calcuserver",
+        bgContainerClass: "bg-gradient-to-r from-blue-500 to-blue-600",
+        isMain: true,
+      },
+    ],
   },
   {
     name: "PDFSigner",
@@ -402,6 +525,14 @@ export const projects: Projects[] = [
         description: "Github",
         link: "https://github.com/raulodev/calcuserver",
         icon: "GithubIcon",
+      },
+    ],
+    image: [
+      {
+        src: "/pdfsigner.png",
+        alt: "pdf signer",
+        bgContainerClass: "bg-gradient-to-r from-green-500 to-green-700",
+        isMain: true,
       },
     ],
   },

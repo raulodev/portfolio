@@ -4,7 +4,15 @@ export interface PersonalInfo {
   email: string;
 }
 
+export interface Image {
+  src: string;
+  alt: string;
+  bgContainerClass?: string;
+  isMain?: boolean;
+}
+
 export interface Projects {
+  image?: Image[];
   name: string;
   description: string;
   link: Link[];
